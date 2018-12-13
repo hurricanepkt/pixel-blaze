@@ -1,7 +1,11 @@
+// ChristmasPewPew
+// by Mark Greenway (https://github.com/hurricanepkt/pixel-blaze)
+ 
+// A FORK OF 
 // Pew-Pew-Pew! (Pattern for PixelBlaze)
 // by Scott Balay -- https://github.com/zenblender
 
-laserCount = 16  // use a multiple of numPaletteRGBs to have each available color represented equally
+laserCount = 8  // use a multiple of numPaletteRGBs to have each available color represented equally
 fadeFactor = 0.8
 speedFactor = 0.005
 
@@ -14,15 +18,15 @@ paletteRGBs[2] = packRGB(0,50,0)
 paletteRGBs[3] = packRGB(50,0,0)
 paletteRGBs[4] = packRGB(50,0,0)
 paletteRGBs[5] = packRGB(0,50,0)
-paletteRGBs[6] = packRGB(50,0,0)
-paletteRGBs[7] = packRGB(50,0,0)
+paletteRGBs[6] = packRGB(0,50,0)
+paletteRGBs[7] = packRGB(0,50,0)
 
 
-ambientR = 5
+ambientR = 15
 ambientG = 0
 ambientB = 0
 
-function getRandomVelocity() { return random(4) + 3; }
+function getRandomVelocity() { return random(7) + 1; }
 
 // init RGB of each laser:
 laserRGBs = createArray(laserCount, function(i){ return paletteRGBs[i % numPaletteRGBs] }, true)
